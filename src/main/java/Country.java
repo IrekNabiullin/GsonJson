@@ -29,16 +29,15 @@ public class Country {
 
     @Override
     public String toString() {
-        return "Country [{name:" + name + "topLevelDomain:[" + topLevelDomain + "], alpha2Code:" + alpha2Code +
-                ", alpha3Code:" + alpha3Code + ", callingCodes :[" + callingCodes + "], capital: " + capital +
-                ", altSpellings: [" + altSpellings + "], region: " + region + ", subregion: " + subregion +
-                ", population " + population + ", latlng:[" + latlng + "], demonym: " + demonym +
-                ",area: " + area + ", gini: " + gini + ",timezones:[" + timezones + "],borders:[ " +
-                borders + "], nativeName: " + nativeName + ", numericCode: " + numericCode +
-                ", currencies[{" + currencies + "}], languages:[{" + languages +
-                "}], translations:{" + translations + "}, flag: " + flag +
-                ", regionalBlocs:[ " + regionalBlocks + "], cioc: " + cioc + "}]";
-
+        return "Country: \nname:" + name + ",\n" + "topLevelDomain:" + topLevelDomain + ", alpha2Code:" + alpha2Code +
+                ", alpha3Code:" + alpha3Code + ", callingCodes :" + callingCodes + ", capital: " + capital +
+                ", altSpellings: " + altSpellings + "," + "\n" + "region: " + region + ", subregion: " + subregion +
+                ", population " + population + ", latlng:" + latlng + ", demonym: " + demonym +
+                ", area: " + area + ", gini: " + gini + ",timezones:" + timezones + ", borders: " +
+                borders + "," + "\n" + "nativeName: " + nativeName + ", numericCode: " + numericCode +
+                ", currencies" + currencies + "," + "\n" + "languages:" + languages +
+                "," + "\n" + "translations:{" + translations.toString() + "}" + ", regionalBlocs:[ " +
+                regionalBlocks + "], cioc: " + cioc + ",\n" + "flag: " + flag;
     }
 }
 
