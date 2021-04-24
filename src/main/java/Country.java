@@ -3,41 +3,41 @@ import java.util.List;
 
 public class Country {
     String name;
-    List<TopLevelDomain> topLevelDomain;
+    List<String> topLevelDomain;
     String alpha2Code;
     String alpha3Code;
-    String callingCodes;
+    List<String> callingCodes;
     String capital;
-    List<AltSpelling> altSpellings;
+    List<String> altSpellings;
     String region;
     String subregion;
     String population;
-    List<Latlng> latlng;
+    List<String> latlng;
     String demonym;
     String area;
     String gini;
-    List<Timezone> timezones;
-    List<Border> borders;
+    List<String> timezones;
+    List<String> borders;
     String nativeName;
     String numericCode;
-    List<Currency> currencies;
-    List<Language> languages;
-    List<Translation> translations;
+    List<Object> currencies;
+    List<Object> languages;
+    Translation translations;
     String flag;
-    List<RegionalBlock> regionalBlocks;
+    List<String> regionalBlocks;
     String cioc;
 
     @Override
     public String toString() {
-        return "Country [{name:" + name + "topLevelDomain:[" + topLevelDomain.toString() + "], alpha2Code:" + alpha2Code +
+        return "Country [{name:" + name + "topLevelDomain:[" + topLevelDomain + "], alpha2Code:" + alpha2Code +
                 ", alpha3Code:" + alpha3Code + ", callingCodes :[" + callingCodes + "], capital: " + capital +
-                ", altSpellings: [" + altSpellings.toString() + "], region: " + region + ", subregion: " + subregion +
-                ", population " + population + ", latlng:[" + latlng.toString() + "], demonym: " + demonym +
-                ",area: " + area + ", gini: " + gini + ",timezones:[" + timezones.toString() + "],borders:[ " +
-                borders.toString() + "], nativeName: " + nativeName + ", numericCode: " + numericCode +
-                ", currencies[{" + currencies.toString() + "}], languages:[{" + languages.toString() +
-                "}], translations:{" + translations.toString() + "}, flag: " + flag +
-                ", regionalBlocs:[ " + regionalBlocks.toString() + "], cioc: " + cioc + "}]";
+                ", altSpellings: [" + altSpellings + "], region: " + region + ", subregion: " + subregion +
+                ", population " + population + ", latlng:[" + latlng + "], demonym: " + demonym +
+                ",area: " + area + ", gini: " + gini + ",timezones:[" + timezones + "],borders:[ " +
+                borders + "], nativeName: " + nativeName + ", numericCode: " + numericCode +
+                ", currencies[{" + currencies + "}], languages:[{" + languages +
+                "}], translations:{" + translations + "}, flag: " + flag +
+                ", regionalBlocs:[ " + regionalBlocks + "], cioc: " + cioc + "}]";
 
     }
 }
