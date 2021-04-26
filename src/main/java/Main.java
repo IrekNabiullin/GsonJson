@@ -11,9 +11,6 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String countryToRequest = "Afghanistan";
-        CountriesAPIReguest countriesAPIReguest = new CountriesAPIReguest();
-        countriesAPIReguest.getCountriesFromApi(countryToRequest);
-
+        CountryFrame.createGUI();
     }
 }
