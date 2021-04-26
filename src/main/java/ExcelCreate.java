@@ -24,7 +24,7 @@ public class ExcelCreate {
         return style;
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void excelCreate() throws IOException {
 
         HSSFWorkbook workbook = new HSSFWorkbook();
         HSSFSheet sheet = workbook.createSheet("Countries");
@@ -32,8 +32,7 @@ public class ExcelCreate {
         TempClass tempClass = new TempClass();
         HashMap<String, String> mapIntoExcel = new HashMap<>();
         mapIntoExcel = tempClass.getCountryMap();
-        mapIntoExcel.entrySet().forEach(entry->{
-            System.out.println(entry.getKey() + " " + entry.getValue());
+        mapIntoExcel.entrySet().forEach(entry -> { System.out.println(entry.getKey() + " " + entry.getValue());
         });
 
         int rownum = 0;
@@ -55,7 +54,7 @@ public class ExcelCreate {
 
 
         // Data
-        for (String country: mapIntoExcel.keySet()){
+        for (String country : mapIntoExcel.keySet()) {
             //Print HashMap
             String key = country.toString();
             String value = mapIntoExcel.get(country).toString();
@@ -73,7 +72,6 @@ public class ExcelCreate {
             cell.setCellValue(value);
         }
         File file = new File("demoCountries.xls");
-//        file.getParentFile().mkdirs();
 
         FileOutputStream outFile = new FileOutputStream(file);
         workbook.write(outFile);

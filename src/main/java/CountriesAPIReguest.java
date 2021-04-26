@@ -73,19 +73,7 @@ public class CountriesAPIReguest {
                     .setLenient()
                     .create();
             countries = gson.fromJson(defaultResponse, Country[].class);
-
-            // output to console:
-            for (int i = 0; i < countries.length; i++) {
-                System.out.println();
-                System.out.println("Country: " + countries[i].name);
-                System.out.println("Translations: " + countries[i].translations);
-                System.out.println("Capital: " + countries[i].capital);
-                System.out.println("Region: " + countries[i].region);
-                System.out.println("Population: " + countries[i].population);
-                System.out.println("Languages: " + countries[i].languages);
-                System.out.println("Currencies: " + countries[i].currencies);
-                System.out.println("Flag:" + countries[i].flag);
-            }
+            e.printStackTrace();
         }
         return countries;
     }

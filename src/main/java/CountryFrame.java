@@ -32,24 +32,7 @@ public class CountryFrame extends JFrame {
         button.setFont(new Font("Verdana", Font.PLAIN, 12));
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
-//                Image img = loadImage(URL);
-//                Image defaultImg = loadDefaultImage(defaultURL);
-//                Image testImg = loadTestImage(defaultURL);
-//                if(img != null){
-//                    label.setIcon(new ImageIcon(img, "Country flag"));
-//                    System.out.println("ImageIcon set");
-//                } else if(testImg !=null){
-//                    label.setIcon(new ImageIcon(testImg, "Test img"));
-//                    System.out.println("TestImage set");
-//                } else {
-//                    label.setIcon(new ImageIcon(defaultImg, "Default image"));
-//                    System.out.println("DefaultImage set");
-//                }
-
                 openWebpage(URL);
-
-
             }
         });
         frame.getContentPane().add(button, BorderLayout.SOUTH);
@@ -67,28 +50,6 @@ public class CountryFrame extends JFrame {
             e.printStackTrace();
         }
     }
-
-//    public static boolean openWebpage(URI uri) {
-//        Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
-//        if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
-//            try {
-//                desktop.browse(uri);
-//                return true;
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        return false;
-//    }
-//
-//    public static boolean openWebpage(URL url) {
-//        try {
-//            return openWebpage(url.toURI());
-//        } catch (URISyntaxException e) {
-//            e.printStackTrace();
-//        }
-//        return false;
-//    }
 
 
     private static Image loadDefaultImage(String URI) {
