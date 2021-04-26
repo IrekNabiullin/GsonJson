@@ -18,6 +18,7 @@ public class CountriesAPIReguest {
             HttpClient httpClient = HttpClientBuilder.create().build();
             String uri = "https://restcountries.eu/rest/v2/name/" + countryName;
             //        HttpGet request = new HttpGet("https://restcountries.eu/rest/v2/name/russia"); //default path
+ //           HttpGet request = new HttpGet("https://restcountries.eu/rest/v2/currency/usd");
             HttpGet request = new HttpGet(uri);
             request.addHeader("method", "get");
             HttpResponse response = httpClient.execute(request);
@@ -38,7 +39,7 @@ public class CountriesAPIReguest {
 
             // output to console:
             for (int i = 0; i < countries.length; i++) {
-                System.out.println(resultString);
+//                System.out.println(resultString);
                 System.out.println("Country: " + countries[i].name);
 //                System.out.println("Translations: " + countries[i].translations);
 //                System.out.println("Capital: " + countries[i].capital);
@@ -46,7 +47,7 @@ public class CountriesAPIReguest {
 //                System.out.println("Population: " + countries[i].population);
 //                System.out.println("Languages: " + countries[i].languages);
 //                System.out.println("Currencies: " + countries[i].currencies);
-//                System.out.println("Flag:" + countries[i].flag);
+                System.out.println("Flag:" + countries[i].flag);
             }
 
         } catch (IOException e) {

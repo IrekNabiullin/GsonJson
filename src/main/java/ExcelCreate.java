@@ -14,7 +14,7 @@ import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 
 
-public class CreateExcelDemo {
+public class ExcelCreate {
 
     private static HSSFCellStyle createStyleForTitle(HSSFWorkbook workbook) {
         HSSFFont font = workbook.createFont();
@@ -27,7 +27,7 @@ public class CreateExcelDemo {
     public static void main(String[] args) throws IOException {
 
         HSSFWorkbook workbook = new HSSFWorkbook();
-        HSSFSheet sheet = workbook.createSheet("Employees sheet");
+        HSSFSheet sheet = workbook.createSheet("Countries");
 
         TempClass tempClass = new TempClass();
         HashMap<String, String> mapIntoExcel = new HashMap<>();
